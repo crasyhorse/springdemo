@@ -3,8 +3,6 @@ plugins {
     id 'application'
     id 'org.springframework.boot' version '3.0.2'
     id 'io.spring.dependency-management' version '1.1.0'
-    id 'war'
-    id "org.gretty" version "4.0.3"
 }
 
 version = '0.0.1'
@@ -15,24 +13,21 @@ java {
     }
 }
 
+application {
+    mainClass = "spring.AnnotationApp"
+}
+
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
     gradlePluginPortal()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    providedCompile 'jakarta.platform:jakarta.jakartaee-api:9.1.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework:spring-test'
     testImplementation 'org.mockito:mockito-core'
     testImplementation 'org.mockito:mockito-junit-jupiter'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
-}
-
-application {
-    // Define the main class for the application.
-    mainClass = 'spring.BasicApp'
 }
 
 tasks.named('test') {
@@ -42,9 +37,4 @@ tasks.named('test') {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-}
-
-jar {
-    archiveBaseName = 'spring-demo'
-    archiveVersion = '0.1.0'
 }
