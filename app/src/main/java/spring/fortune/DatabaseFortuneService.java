@@ -3,10 +3,10 @@ package spring.fortune;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class DatabaseFortuneService implements FortuneService {
 
     @Override
     public String getFortune() {
-        return "You are very happy.";
+        return "SELECT fortune FROM table.";
     }
 }

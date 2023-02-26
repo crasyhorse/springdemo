@@ -3,10 +3,11 @@ package spring.fortune;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class RestFortuneService implements FortuneService {
 
     @Override
     public String getFortune() {
-        return "You are very happy.";
+        return "Have a RESTful day.";
     }
 }
+
