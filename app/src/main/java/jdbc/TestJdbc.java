@@ -1,0 +1,20 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class TestJdbc {
+
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:postgresql://pgsql:5432/hb_student_tracker";
+        String user = "hbstudent";
+        String pass = "hbstudent";
+        try {
+            System.out.println("Connecting to database " + jdbcUrl);
+            Connection conn = DriverManager.getConnection(jdbcUrl, user, pass);
+            System.out.println("Connection success");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
