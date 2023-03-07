@@ -13,9 +13,8 @@ public class QueryStudentDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
-        ) {
             Session session = factory.getCurrentSession();
-
+        ) {
             session.beginTransaction();
 
             List<Student> students = session
@@ -45,15 +44,15 @@ public class QueryStudentDemo {
             displayStudents(students);
 
             students =
-            session
-                .createQuery(
-                    "from Student s WHERE s.email LIKE '%gmx%'",
-                    Student.class
-                )
-                .getResultList();
+                session
+                    .createQuery(
+                        "from Student s WHERE s.email LIKE '%gmx%'",
+                        Student.class
+                    )
+                    .getResultList();
 
-        displayStudents(students);
-        session.getTransaction().commit();
+            displayStudents(students);
+            session.getTransaction().commit();
         }
     }
 

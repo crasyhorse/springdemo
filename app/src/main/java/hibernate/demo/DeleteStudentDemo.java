@@ -13,18 +13,19 @@ public class DeleteStudentDemo {
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         ) {
-            int studentId = 1;
-
             Session session = factory.getCurrentSession();
+            int studentId = 1;
             
-             session.beginTransaction();
+            session.beginTransaction();
             Student myStudent = session.get(Student.class, studentId);
             session.remove(myStudent);
             session.getTransaction().commit();
             session = factory.getCurrentSession();
             session.beginTransaction();
-            session.createMutationQuery("DELETE FROM student WHERE id=4").executeUpdate();
-                
+            session
+                .createMutationQuery("DELETE FROM student WHERE id=4")
+                .executeUpdate();
+
             session.getTransaction().commit();
         }
     }

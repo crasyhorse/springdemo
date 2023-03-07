@@ -13,10 +13,9 @@ public class UpdateStudentDemo {
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
         ) {
+            Session session = factory.getCurrentSession();
             int studentId = 3;
 
-            Session session = factory.getCurrentSession();
-            
             session.beginTransaction();
 
             Student student = session.get(Student.class, studentId);
@@ -27,9 +26,10 @@ public class UpdateStudentDemo {
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            session.createMutationQuery("Update student SET email='gmail.com'")
+            session
+                .createMutationQuery("Update student SET email='gmail.com'")
                 .executeUpdate();
-                
+
             session.getTransaction().commit();
         }
     }

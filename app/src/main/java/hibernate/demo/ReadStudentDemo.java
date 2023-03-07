@@ -24,7 +24,9 @@ public class ReadStudentDemo {
             session.persist(tmpStudent);
             session.getTransaction().commit();
 
-            System.out.println(String.format("Saved student's id: %S", tmpStudent.getId()));
+            System.out.println(
+                String.format("Saved student's id: %S", tmpStudent.getId())
+            );
             session = factory.getCurrentSession();
             session.beginTransaction();
 

@@ -16,7 +16,7 @@ java {
 }
 
 application {
-    mainClass = 'hibernate.UpdateStudentDemo'
+    mainClass = 'hibernate.oneToOneBi.DeleteInstructorDetailDemo'
 }
 
 repositories {

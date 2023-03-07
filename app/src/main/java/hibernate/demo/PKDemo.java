@@ -12,8 +12,8 @@ public class PKDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
-        ) {
             Session session = factory.getCurrentSession();
+        ) {
             Student tmpStudent1 = new Student(
                 "Florian",
                 "Weidinger",
