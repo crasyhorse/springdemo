@@ -16,7 +16,7 @@ java {
 }
 
 application {
-    mainClass = 'jdbc.TestJdbc'
+    mainClass = 'hibernate.UpdateStudentDemo'
 }
 
 repositories {
@@ -33,7 +33,8 @@ dependencies {
 
     implementation 'org.hibernate.orm:hibernate-core:6.1.7.Final'
     implementation 'org.postgresql:postgresql:42.5.4'
-        
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+
     testImplementation 'org.springframework:spring-test'
     testImplementation 'org.mockito:mockito-core'
     testImplementation 'org.mockito:mockito-junit-jupiter'
