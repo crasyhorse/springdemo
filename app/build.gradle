@@ -16,7 +16,7 @@ java {
 }
 
 application {
-    mainClass = 'hibernate.oneToMany.DeleteInstructorCoursesDemo'
+    mainClass = 'hibernate.manyToMany.DeleteJaneStudentDemo'
 }
 
 repositories {
