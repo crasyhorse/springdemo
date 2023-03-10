@@ -27,7 +27,7 @@ public class UpdateStudentDemo {
             session.beginTransaction();
 
             session
-                .createMutationQuery("Update student SET email='gmail.com'")
+                .createQuery("Update Student SET email='gmail.com'")
                 .executeUpdate();
 
             session.getTransaction().commit();

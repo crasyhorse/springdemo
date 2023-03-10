@@ -1,6 +1,6 @@
 package mvc.customer;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;

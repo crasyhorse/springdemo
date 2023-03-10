@@ -3,7 +3,7 @@ package hibernate.eagerVsLazyDemo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.SelectionQuery;
+import org.hibernate.query.Query;
 
 public class FetchJoinDemo {
 
@@ -18,7 +18,7 @@ public class FetchJoinDemo {
                 Session session = factory.getCurrentSession();) {
 
             session.beginTransaction();
-            SelectionQuery<Instructor> query = session.createSelectionQuery("SELECT i from Instructor i "
+            Query<Instructor> query = session.createQuery("SELECT i from Instructor i "
                     + "JOIN FETCH i.courses "
                     + "WHERE i.id = :theInstructorId",
                     Instructor.class);

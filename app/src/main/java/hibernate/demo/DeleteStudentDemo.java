@@ -23,7 +23,7 @@ public class DeleteStudentDemo {
             session = factory.getCurrentSession();
             session.beginTransaction();
             session
-                .createMutationQuery("DELETE FROM student WHERE id=4")
+                .createQuery("DELETE FROM student WHERE id=4")
                 .executeUpdate();
 
             session.getTransaction().commit();
