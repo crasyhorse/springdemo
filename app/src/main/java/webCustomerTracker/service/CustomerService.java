@@ -1,10 +1,11 @@
-package webCustomerTracker.dao;
+package webCustomerTracker.service;
 
 import java.util.List;
 
-import webCustomerTracker.entity.Customer;;
+import webCustomerTracker.entity.Customer;
 
-public interface CustomerDAO {
+public interface CustomerService {
+    
     List<Customer> getCustomers();
 
     void saveCustomer(Customer customer);
