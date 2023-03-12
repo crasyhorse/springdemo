@@ -16,7 +16,7 @@ java {
 }
 
  gretty {
-    httpPort = 8081
+    httpPort = 8080
     servletContainer = 'tomcat9'
     contextPath = '/'
     scanInterval = 2
