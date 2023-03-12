@@ -13,6 +13,7 @@
                 "vscjava.vscode-spring-initializer",
                 "naco-siren.gradle-language",
                 "shengchen.vscode-checkstyle",
+                "rangav.vscode-thunder-client",
 		"redhat.vscode-xml",
 		"mwpb.java-prettier-formatter"
             ]
